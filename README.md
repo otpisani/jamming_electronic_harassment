@@ -7,6 +7,6 @@ I first invest in passive shielding, and this days still combine passive shieldi
 
 ###[software_os](https://github.com/otpisani/jamming_electronic_harassment/blob/main/software_OS/readme.md)
 ###[antennas](https://github.com/otpisani/jamming_electronic_harassment/blob/main/antennas/readme.md)
-[amplifiers](https://github.com/otpisani/jamming_electronic_harassment/edit/main/amplifiers/readme.txt)
-[hackrf changes](https://github.com/otpisani/jamming_electronic_harassment/tree/main/SDR_cards/hackrf/changes_that_you_need_to_do)
+###[amplifiers](https://github.com/otpisani/jamming_electronic_harassment/edit/main/amplifiers/readme.txt)
+###[hackrf changes](https://github.com/otpisani/jamming_electronic_harassment/tree/main/SDR_cards/hackrf/changes_that_you_need_to_do)
 
