@@ -18,4 +18,121 @@ No matter if you have new or old micro SD card, first you need to delete MBR rec
 
 Although in manual they will recommend using specially image for raspberry pi 2, I install also specially 64bit made just for raspebrry pi 3b+, but they say that is not full covered with support.
 
-After that please follow this
+After that please follow this [manual](https://archlinuxarm.org/platforms/armv7/broadcom/raspberry-pi-2)
+wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz
+
+After installation you can put micro SD card into raspberry, and you can boot system without monitor, and you can connect true terminal with ssh
+
+ssh alarm@ipaddress that router attach for arch pi
+
+you can look on router which all have web interface, what he dedicate for arch pi, because arch pi have dhcpcd client enabled by default, but you can always found out IP address with command sudo rap -a -i hardware device that you will scan, usually eth0
+
+you need to install only this packages to arch pi, to be able to run gnu radio python script with hacker or Limescale, I list mine packages with command pacman -Qe
+archlinuxarm-keyring 20140119-2 
+base 3-1 
+base-devel 1-1 
+cmake 3.27.5-1 
+dhcpcd 10.0.2-1 
+dialog 1:1.3_20230209-1 
+git 2.42.0-1 
+gnuradio 3.10.7.0-5 
+gnuradio-osmosdr 0.2.4-7 
+hackrf 2023.01.1-1 
+htop 3.2.2-1 
+limesuite 22.09.1-3 
+linux-rpi 6.1.53-1 
+mc 4.8.30-1 
+nano 7.2-1 
+net-tools 2.10-2 
+netctl 1.28-2 
+openssh 9.4p1-4 
+pkgfile 21-2 
+raspberrypi-bootloader 20230914-1 
+raspberrypi-firmware 20230914-1 
+soapyhackrf 0.3.4-1 
+sudo 1.9.14.p3-1 
+tmux 3.3_a-7 
+usbtop 1.0-1 
+usbutils 015-3 
+vi 1:070224-6 
+which 2.21-6 
+wireless-regdb 2023.09.01-1 
+wireless_tools 30.pre9-3 
+wpa_supplicant 2:2.10-8 
+yay 12.1.2-1
+
+packages marked with Italic are installed specially by me, other you will get with installation, cmake is tool for compiling if you want to compile let say latest hackrf packages or SoapySDR, although you don’t need that because you will get latest package with pacman installation pacman -Sy hackrf
+hackrf is utilities made by hackrf team with Mosmman, for running python scripts, you also need gnuradio 3.10.7.0-5 
+gnuradio-osmosdr 0.2.4-7 soapyhackrf tmux is emulator on which you can open command true ssh session and command will not be terminated after you leave ssh session with [shortcuts](https://tmuxcheatsheet.com/) yay is package installer for third party software repository
+
+
+Because you will not have monitor attached when you will have all that in backpack, you can only check some basics with mobile phone, if script is running, we will put script to auto boot when arch pi booting.
+
+sudo nano /etc/systemd/network/wlan0.network and change file like this if it’s different 
+[Match] 
+Name=wlan0 
+
+[Network] 
+Description=On-board wireless NIC 
+DHCP=yes 
+
+or if you want to use static address
+
+[Match] 
+Name=wlan0 
+
+[Network] 
+Description=On-board wireless NIC 
+Address=192.168.x.y 
+Gateway=192.168.x1.y1 
+DNS=192.168.x1.y1
+
+with ip addr s you can check if you have more than one ip address attached to device wlan0 by your router or mobile phone hot spot, if you have means that also dhcpcd and service systemd-networkd are enable on boot by default, so you need to disable one of that service, but warning, if you disable wrong one, you will not have to attach back without monitor and keyboard attached on raspberry.
+
+sudo systemctl disable dhcpcd 
+
+but check if you have systemd-networkd enabled
+
+sudo systemctl | grep systemd-networkd
+
+you need to have configured wpa_supplicant to connect arch pi to wlan router or mobile hotspot, and you need to put file in this path
+
+/etc/wpa_supplicant/wpa_supplicant-wlan0.conf if you using wlan0 interface,and this is basic what you need to put inside 
+
+sudo nano etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel 
+
+
+network={ 
+       ssid="name of SSID" 
+       psk="wpa key" 
+       scan_ssid=1
+       key_mgmt=WPA-PSK 
+}
+
+you can enable all interface to boot with sudo systemctl enable systemd-networkd, or just one of tham, wlan for example  sudo systemctl enable systemd-networkd@wlan0
+
+Now you need to put python script to start execute when arch pi starts, and again we will use systemctl service for that to start at boot time, another method would be execute script at boot time with cronie @reboot name of the command or script.
+
+sudo nano /etc/systemd/system/name_of_the_service
+
+you than need to place inside just path where is the script 
+
+Unit] 
+Description=Script 
+
+[Service] 
+ExecStart=/usr/bin/bash /home/your-account_name/name_of_the-script.sh 
+
+[Install] 
+WantedBy=multi-user.target
+
+
+and after that 
+
+sudo systemctl enable /etc/systemd/system/name_of_the_service
+
+And Finally you need to put python script that you made before with gnuradio-companion GUI version of gnuradio, and guess what will be using inside gnuradio-companion as major blocks, noise-source, and also you have option fast-noise-source, everything you put inside “name_of_the-script.sh”, will actually do jamming process.
+
+
