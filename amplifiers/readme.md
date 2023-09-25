@@ -36,8 +36,7 @@ https://www.aliexpress.com/item/1005002362165650.html?pdp_npi=3%40dis%21USD%21US
 https://www.aliexpress.com/item/1005002222653277.html?spm=a2g0o.order_list.order_list_main.279.1dc41802h
 2qLgD
 
-Step voltage [down regulator](https://www.aliexpress.com/item/1005004983920053.html?spm=a2g0o.order_list.order_list_main.140.1dc
-41802h2qLgD), for outside, if you will buy battery accumulator Litium 18650, which is much 
+Step voltage [down regulator](https://www.aliexpress.com/item/1005004983920053.html?spm=a2g0o.order_list.order_list_main.140.1dc41802h2qLgD), for outside, if you will buy battery accumulator Litium 18650, which is much 
 better than lead batteries, they last longer and they are much lighter for carrying arround, 12.6V Lithium
 battery 15Ah, weight around 450g, same lead batteries around 5kg. Step down voltage regulator is needed if 
 you will connect raspberry pi 3B+ operate on 5.1-5.2V, or amplifiers which uses 5V power supply
