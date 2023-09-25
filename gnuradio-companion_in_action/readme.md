@@ -1,4 +1,4 @@
-Follow this link, text bellow are concomitant with this video, which is longer than 100MB allowed files
+Follow this [link](https://1drv.ms/v/s!AnF39I-OvU0IgZ1PxdtP-dB8BA3-Fg?e=eVdxTh), text bellow are concomitant with this video, which is longer than 100MB allowed files
 on git 
 
 https://1drv.ms/v/s!AnF39I-OvU0IgZ1PxdtP-dB8BA3-Fg?e=eVdxTh
@@ -11,7 +11,7 @@ linux dis), although hackrf and LimeSDR also have soapy sink, soapy is like emul
 in "soapy mode", that would be about 
 you, whats batter suits you best solution for you, depends a lot of python version, errors that you will 
 have, number one rules is !!!!don’t 
-ever update OS which is just for jamming!!!!
+ever update OS which is just for jamming WHEN ACTUALLY ALL WORKS!!!!
 
 option to put in osmocom block under device arguments 
 
