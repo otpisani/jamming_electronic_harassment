@@ -15,5 +15,6 @@ HackrRF card actually works for me 24/7 in TX mode, I don't use RX, I also have 
 original Mossmann HackRF revision r7, and they suffer also from MGA-81563 disease, but must admit r7 last 
 much longer for me (around 2 weeks) than previous hardware changes, after that you can't use additional
 gain of 14dB.
+[hackrf changes](hhttps://github.com/otpisani/jamming_electronic_harassment/tree/main/SDR_cards/hackrf/changes_that_you_need_to_do)
 
 
