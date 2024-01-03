@@ -4,13 +4,16 @@ jamming electronic harrasment at home, flat, outside
 Main frequency which is actually multi chanell, presume for microphone (vocoder), maping human body is around 24.35MHz, beacuse band from 0-30MHZ is military and/or maritime, need to be some military signal, bandwidth is around 700-800KHz, although could be less, antenna is in apartment, RTL card is excellent specially made for HF band, but it's "fine tuning science", measuring need to be outside, so that line could be even parasitic/ghost signal, but this is it for sure, there is couple of known military modulation operating with in that bandwidth according to [sigidwiki](https://https://www.sigidwiki.com/wiki/Category:Military). That frequency jump out recently somehow when I jamming whole apartment. Software is SDR++ on linux, with SDR card airspy HF+, with active loop antenna, bought on Ali, but loop is made from cooper tube for radiators heaters.![MKULTRA](https://github.com/otpisani/jamming_electronic_harassment/assets/4509181/c5420226-7d3a-411a-9a26-b1c20f744e75)
 
 What is not working as it should, that you just turn on some noise, in GNUradio that would be uniform or gaussian, and than that looks like this, that signal is flatten, jammed but not good enough, no matter if I change noise source every 60s, like this
-while true; do
-timeout -s 9 60s /home/otpisani/limeSDR-grc_uniform_24332_classic.py
-timeout -s 9 60s /home/otpisani/limeSDR-grc_gaussian_24332_classic.py!
-#timeout -s 9 30s python3 -uuu ~/Downloads/hackrf_osmo_104_gaussian_classic.py
-#timeout -s 9 30s python3 -uuu ~/Downloads/hackrf_osmo_104_uniform_classic.py;
-done
-jamming signal is above biggest pick signal that I try to jam, but is not good enough
+
+*while true; do*  
+*timeout -s 9 60s /home/otpisani/limeSDR-grc_uniform_24332_classic.py*<br> 
+*timeout -s 9 60s /home/otpisani/limeSDR-grc_gaussian_24332_classic.py*<br>
+*#timeout -s 9 30s python3 -uuu ~/Downloads/hackrf_osmo_104_gaussian_classic.py*<br> 
+*#timeout -s 9 30s python3 -uuu ~/Downloads/hackrf_osmo_104_uniform_classic.py*<br> 
+*done*<br>  
+
+
+Jamming signal is above biggest pick signal that I try to jam, but is not good enough
 ![uniform_flat_line](https://github.com/otpisani/jamming_electronic_harassment/assets/4509181/97e86561-7853-4c70-b48b-2dd8ab5b3cf9)
 
 But actually what is works is this:
