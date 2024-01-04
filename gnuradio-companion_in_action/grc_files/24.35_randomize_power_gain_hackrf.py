@@ -37,7 +37,7 @@ class pmj(gr.top_block):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 8e6
-        self.f0 = f0 = 24.332599e6
+        self.f0 = f0 = 24.95e6
         self.bw = bw = 1.5e6
 
         ##################################################
@@ -51,17 +51,17 @@ class pmj(gr.top_block):
         self.osmosdr_sink_0.set_freq_corr(0, 0)
         self.osmosdr_sink_0.set_gain(14, 0)
         self.osmosdr_sink_0.set_if_gain(16, 0)
-        self.osmosdr_sink_0.set_bb_gain(16	, 0)
+        self.osmosdr_sink_0.set_bb_gain(0	, 0)
         self.osmosdr_sink_0.set_antenna('', 0)
         self.osmosdr_sink_0.set_bandwidth(bw, 0)
         self.band_pass_filter_0 = filter.fir_filter_ccf(
             1,
             firdes.band_pass(
-                20,
+                1,
                 samp_rate,
-                 650.0e3,
-                1300.0e3,
-                100.0e3,
+                150.0e3,
+                950.0e3,
+                15.0e3,
                 window.WIN_HAMMING,
                 6.76))
         self.analog_noise_source_x_0 = analog.noise_source_c(analog.GR_GAUSSIAN, 1, 0)
@@ -78,7 +78,7 @@ class pmj(gr.top_block):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.band_pass_filter_0.set_taps(firdes.band_pass(20, self.samp_rate,  650.0e3, 1300.0e3, 100.0e3, window.WIN_HAMMING, 6.76))
+        self.band_pass_filter_0.set_taps(firdes.band_pass(20, self.samp_rate,  150.0e3, 950.0e3, 15.0e3, window.WIN_HAMMING, 6.76))
         self.osmosdr_sink_0.set_sample_rate(self.samp_rate)
 
     def get_f0(self):
