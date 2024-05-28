@@ -64,3 +64,8 @@ and copper plate
 [Building manual](https://www.nxp.com/company/blog/homebrew-rf-design-challenge-winners:BL-HOMEBREW-RF-DESIGN-CHALLENGE-WINNERS?spm=a2g0s.imconversation.0.0.6e913e5fTA2gwg#iw_comp1596645344954), but you need part when he put thermo past, but also conductive, bigger radiator and 
 copper plate, also this guy is presume ham operator, and he actually won sonme award from XRP mosfets 
 manufacturer for he’s amplifier design.
+
+!!!Last update!!!
+Last update on amplifier 600W, but after I update that feature on all amplifiers that I'm using right know. Cooper plate is must, because Cooper is excellent thermal and electrical conductor, without fets are going to blown fast, you will get more heat which will rise current and you will left without IC fet. In my country cooper plate roughly price for 1kg is about 12.5€/kg called flat cooper, with different thickness, but don't take less than 5mm, I usually take 8mm thickness and wide depends how big is your AL radiator, length depends about Al radiator and PCB board. 
+With cooper plate must is also thermal tape, which goes like sandwich between Al radiator and cooper plate, specially part on PCB board where is fets, that tape, has specially feature that changes aggregate state when heat is going up. this is link on [Mouser](ttps://hr.mouser.com/ProductDetail/739-A15322-01)
+
