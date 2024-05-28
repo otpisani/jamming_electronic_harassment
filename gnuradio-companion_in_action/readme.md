@@ -85,3 +85,5 @@ handle, and it's only usb 2.0, in case of lime
 before sudo usbtop you need to insert module usbmon
 
 sudo modprobe usbmon but do that on start or boot
+
+I recently find out that it's lot depends about OS or linux distro, first I start with Arch, than with special distro for RTL Dragon, based on Lubuntu, after that I again return on arch, and after some testing with Fedora 39 server, I found out that is much better for me Fedora, don't know what they did, but Python scripts actually runs smoother that on Arch platform
