@@ -6,5 +6,5 @@ With this jamming methods I discover most frequency that are using, and they are
 HOW I discover that, simple, if you actually do jamming them, you will left them without job, and their only task on this planet is to convince you that you are wrong and that is not hope for you, except them, and what they did, simply they jump around whole bandwidth which they didn't used in the past, because I follow that with Pavlova spectrum analyzer for years now, in my home, and outside, this things last for 3-4 years know. When you are not jamming tham, they will lower gain, they don't need it, but when you start behaving strange, like you want your head with yours thoughts, they will put in the third gear, and finally you can discover them with Pavsa spectrum analyzer. Clever jamming is actually sweeping jammer or hopping jammer jump every second more or less, which you can define with -d parameter.
 Clever jamming in action if you don't or can't downloaded from git on [dropbox](https://www.dropbox.com/scl/fi/xt2mdsuyatl5wzuf7t0cw/clever_jam.mp4?rlkey=cleg3fv7l0qgg9yvw7sbuf91g&st=w3zr6srr&dl=0)
 
-[measuring before jamming](jamming_in_action/measuring_before_jamming 05_29_22 14_07_27.png)
-[measuring_in_present_time_while_jamming](jamming_in_action/measuring_while_jamming_4.8.2024. 1_02_35.png)
+![measuring before jamming](https://github.com/otpisani/jamming_in_action/measuring_before_jamming 05_29_22 14_07_27.png)
+![measuring_in_present_time_while_jamming](https://github.com/otpisani/jamming_in_action/measuring_while_jamming_4.8.2024. 1_02_35.png)
