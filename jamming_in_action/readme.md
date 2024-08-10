@@ -8,4 +8,4 @@ Clever jamming in action if you don't or can't downloaded from git on [dropbox](
 
 ![measuring before jamming](https://github.com/otpisani/jamming_electronic_harassment/blob/main/jamming_in_action/measuring_before_jamming_05_29_22_14_07_27.png)
 
-![measuring_in_present_time_while_jamming](https://github.com/otpisani/jamming_in_action/measuring_while_jamming_4.8.2024. 1_02_35.png)
+![measuring_in_present_time_while_jamming](https://github.com/otpisani/jamming_electronic_harassment/blob/main/jamming_in_action/measuring_while_jamming_4_8_2024_1_02_35.png)
