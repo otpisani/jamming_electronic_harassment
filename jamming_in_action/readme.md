@@ -7,4 +7,5 @@ HOW I discover that, simple, if you actually do jamming them, you will left them
 Clever jamming in action if you don't or can't downloaded from git on [dropbox](https://www.dropbox.com/scl/fi/xt2mdsuyatl5wzuf7t0cw/clever_jam.mp4?rlkey=cleg3fv7l0qgg9yvw7sbuf91g&st=w3zr6srr&dl=0)
 
 ![measuring before jamming](https://github.com/otpisani/jamming_in_action/measuring_before_jamming 05_29_22 14_07_27.png)
+
 ![measuring_in_present_time_while_jamming](https://github.com/otpisani/jamming_in_action/measuring_while_jamming_4.8.2024. 1_02_35.png)
